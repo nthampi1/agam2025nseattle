@@ -6,7 +6,14 @@ export default function LandingPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-10" style={{ backgroundColor: '#f87171' }}>
+    <div
+      className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-10"
+      style={{
+        backgroundImage: "url('/images/machani.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <motion.img
         src="/images/agam-logo.png"
         alt="Machani Logo"
@@ -22,7 +29,7 @@ export default function LandingPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        Machani
+        We are here to make culture
       </motion.h1>
 
       <motion.h2
@@ -34,7 +41,9 @@ export default function LandingPage() {
         Presented by Machani
       </motion.h2>
 
-      <p className="text-yellow-800 text-base max-w-md mb-10">Connecting People</p>
+      <p className="text-yellow-800 text-base max-w-md mb-10">
+        Connecting People
+      </p>
 
       <div className="space-y-6 w-full max-w-md">
         <motion.button
@@ -51,6 +60,14 @@ export default function LandingPage() {
           whileHover={{ scale: 1.05 }}
         >
           Upcoming Event
+        </motion.button>
+
+        <motion.button
+          className="w-full py-3 px-6 bg-blue-500 text-white text-lg rounded-xl shadow hover:bg-blue-600"
+          onClick={() => navigate("/pics")}
+          whileHover={{ scale: 1.05 }}
+        >
+          Event Gallery
         </motion.button>
       </div>
     </div>
